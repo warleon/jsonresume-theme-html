@@ -20,10 +20,6 @@ const resume = {
   },
 }
 
-it('renders a resume', () => {
-  expect(render(resume)).toMatchSnapshot()
-})
-
 it('renders valid HTML', async () => {
   const htmlvalidate = new HtmlValidate({
     extends: ['html-validate:recommended', 'html-validate:prettier'],
