@@ -1,22 +1,24 @@
-# jsonresume-theme-html
+# jsonresume-theme-compact
 
-[![npm package version](https://img.shields.io/npm/v/@warleon/jsonresume-theme-html.svg)](https://www.npmjs.com/package/@warleon/jsonresume-theme-html)
+[![npm package version](https://img.shields.io/npm/v/@warleon/jsonresume-theme-compact.svg)](https://www.npmjs.com/package/@warleon/jsonresume-theme-compact)
 
-An unstyled [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
-Renders clean, semantic HTML with no CSS styling for maximum compatibility and customization.
+A compact [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
+Renders clean, semantic HTML with compact CSS styling using proximity design principles for optimal space utilization and information hierarchy.
 
-- 📄 Clean, unstyled HTML output
+- 📄 Compact, space-efficient layout
+- 🎯 Proximity design principles for information hierarchy
 - 💄 Markdown support
 - 🧩 Standalone CLI
 - 📦 ESM and CommonJS builds
 - 🤖 TypeScript typings
-- 🎯 Browser default styling only
+- 📱 Responsive design for all screen sizes
+- 🖨️ Print-optimized for PDF generation
 - ♿ Semantic and accessible markup
 
 ## Installation
 
 ```console
-npm install @warleon/jsonresume-theme-html
+npm install @warleon/jsonresume-theme-compact
 ```
 
 ## Usage
@@ -24,8 +26,8 @@ npm install @warleon/jsonresume-theme-html
 ### With resume-cli
 
 ```console
-npm install resume-cli @warleon/jsonresume-theme-html
-npx resume export resume.html --theme @warleon/jsonresume-theme-html
+npm install resume-cli @warleon/jsonresume-theme-compact
+npx resume export resume.html --theme @warleon/jsonresume-theme-compact
 ```
 
 ### With Resumed
@@ -33,8 +35,8 @@ npx resume export resume.html --theme @warleon/jsonresume-theme-html
 [Resumed](https://github.com/rbardini/resumed) requires you to install the theme, since it does not come with any by default:
 
 ```console
-npm install resumed @warleon/jsonresume-theme-html
-npx resumed render --theme @warleon/jsonresume-theme-html
+npm install resumed @warleon/jsonresume-theme-compact
+npx resumed render --theme @warleon/jsonresume-theme-compact
 ```
 
 ### Standalone usage
@@ -42,28 +44,46 @@ npx resumed render --theme @warleon/jsonresume-theme-html
 This theme comes with a barebones CLI that reads resumes from `stdin` and outputs HTML to `stdout`. This allows usage without any resume builder tools:
 
 ```console
-npx @warleon/jsonresume-theme-html < resume.json > resume.html
+npx @warleon/jsonresume-theme-compact < resume.json > resume.html
 ```
 
 ## Features
 
-This theme generates completely unstyled HTML that:
+This theme generates compact, professionally styled HTML that:
+
+### Design Principles
+
+- **Proximity Design**: Related information is grouped closer together to establish clear visual hierarchy
+- **Compact Layout**: Optimized spacing and typography for maximum information density
+- **No Decorative Styling**: Focuses on layout and spacing without colors or decorative fonts
+- **Information Hierarchy**: Uses spacing and positioning to guide the reader's attention
+
+### Technical Features
 
 - Uses semantic HTML5 elements for accessibility
-- Contains no CSS styling (no external stylesheets, no inline styles)
-- Loads no external fonts or resources
-- Renders with browser default styling only
-- Produces clean, minimal HTML markup
+- Responsive grid layout that adapts to different screen sizes
+- Compact typography with optimized font sizes and line heights
+- Tighter spacing between related elements (list items, job details, skills)
+- Reduced gaps between sections while maintaining readability
+- Print-optimized CSS for clean PDF generation
 - Supports all resume schema fields
 - Processes Markdown content in descriptions
 
-The resulting HTML can be:
+### Layout Characteristics
 
-- Styled with your own CSS
-- Used as a base for custom themes
-- Integrated into existing websites
-- Printed with consistent results across browsers
-- Displayed reliably in any environment
+- **Header**: Compact masthead with essential contact information
+- **Sections**: Tightly spaced sections with clear visual separation
+- **Timeline**: Compact work/education history with minimal visual elements
+- **Skills**: Efficiently organized skill tags with reduced spacing
+- **Two-column responsive layout** on larger screens for better space utilization
+
+The resulting HTML is perfect for:
+
+- Professional resumes requiring maximum information density
+- PDF generation with consistent, compact formatting
+- Modern web display with responsive design
+- Accessibility-focused document structure
+- Clean, readable markup that maintains visual hierarchy
 
 ## Output Structure
 
@@ -72,7 +92,7 @@ The theme generates a standard HTML document with:
 - Proper DOCTYPE and semantic structure
 - Meta tags for SEO and viewport
 - Hierarchical content organization using appropriate HTML elements
-- CSS classes present but with no styling applied
-- Clean, readable markup
+- Compact CSS styling focused on proximity and spacing
+- Clean, readable markup optimized for information density
 
-Perfect for developers who want full control over styling or need unstyled HTML for integration purposes.
+Perfect for professionals who need a clean, compact resume layout that maximizes information display while maintaining excellent readability and accessibility.

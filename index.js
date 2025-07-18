@@ -1,5 +1,4 @@
-// @ts-expect-error `?raw` query
-// @ts-expect-error `?inline` query
+import { css } from './assets/compact.js'
 import Resume from './components/resume.js'
 
 export const pdfRenderOptions = {
@@ -12,5 +11,5 @@ export const pdfRenderOptions = {
  * @returns {string}
  */
 export const render = resume => {
-  return Resume(resume, { css: '', js: '' })
+  return Resume(resume, { css, js: '' })
 }
