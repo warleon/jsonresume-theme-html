@@ -1,5 +1,4 @@
 import { html } from '@rbardini/html'
-import colors from '../utils/colors.js'
 import Awards from './awards.js'
 import Certificates from './certificates.js'
 import Education from './education.js'
@@ -23,12 +22,11 @@ import Work from './work.js'
  */
 export default function Resume(resume, { css, js } = {}) {
   return html`<!doctype html>
-    <html lang="en" style="${colors(resume.meta)}">
+    <html lang="en">
       <head>
         <meta charset="utf-8" />
         ${Meta(resume.basics)}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
         ${css &&
         html`<style>
           ${css}

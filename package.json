@@ -1,25 +1,24 @@
 {
-  "name": "jsonresume-theme-even",
-  "version": "0.23.0",
-  "description": "A flat JSON Resume theme, compatible with the latest resume schema",
+  "name": "@warleon/jsonresume-theme-html",
+  "version": "0.0.1",
+  "description": "A JSON Resume theme, compatible with the latest resume schema",
   "keywords": [
     "resume",
     "json",
     "theme",
-    "flat",
+    "html",
     "curriculum-vitae",
     "cv"
   ],
-  "homepage": "https://jsonresume-theme-even.rbrd.in/",
   "bugs": {
-    "url": "https://github.com/rbardini/jsonresume-theme-even/issues"
+    "url": "https://github.com/warleon/jsonresume-theme-html/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rbardini/jsonresume-theme-even.git"
+    "url": "git+https://github.com/warleon/jsonresume-theme-html.git"
   },
   "license": "MIT",
-  "author": "Rafael Bardini",
+  "author": "Warleon",
   "type": "module",
   "exports": {
     ".": {
@@ -39,7 +38,7 @@
   "source": "index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "jsonresume-theme-even": "bin/cli.js"
+    "jsonresume-theme-html": "bin/cli.js"
   },
   "files": [
     "bin",
