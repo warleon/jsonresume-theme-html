@@ -1,6 +1,6 @@
 {
   "name": "@warleon/jsonresume-theme-html",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JSON Resume theme, compatible with the latest resume schema",
   "keywords": [
     "resume",
