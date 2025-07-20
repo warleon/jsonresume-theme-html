@@ -87,22 +87,39 @@ ul {
   margin-top: 0.15em;
 }
 
-/* Make regular lists more horizontal when content allows */
-:not(.icon-list, .tag-list, .grid-list) > li {
+/* HORIZONTAL LAYOUT: Only for specific contexts */
+.icon-list li {
   display: inline-block;
-  margin-right: 1.5em;
+  margin-right: 1em;
   vertical-align: top;
-  width: auto;
-  min-width: 12em;
+  max-width: 15em;
+  word-wrap: break-word;
 }
 
-/* Override inline for longer content */
-:not(.icon-list, .tag-list, .grid-list) > li:has(> p),
-:not(.icon-list, .tag-list, .grid-list) > li:has(> div),
-:not(.icon-list, .tag-list, .grid-list) > li:has(> article) {
-  display: block;
-  margin-right: 0;
-  width: 100%;
+/* HORIZONTAL FOR SHORT LISTS: Most lists try horizontal first */
+ul:not(.tag-list) li {
+  display: inline-block;
+  margin-right: 1em;
+  vertical-align: top;
+  max-width: 12em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* FORCE VERTICAL: Lists in articles (highlights, descriptions) */
+article ul li,
+.timeline ul li {
+  display: block !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  margin-bottom: 0.15em;
+}
+
+/* Single item lists are usually longer content */
+ul li:only-child {
+  display: block !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
 }
 
 li::marker,
@@ -334,9 +351,9 @@ blockquote > * + *,
   }
 
   /* HORIZONTAL LIST LAYOUT FOR LARGER SCREENS */
-  :not(.icon-list, .tag-list, .grid-list) > li {
-    min-width: 15em;
-    margin-right: 2em;
+  ul:not(.tag-list) li:not(article ul li):not(.timeline ul li) {
+    max-width: 18em;
+    margin-right: 1.5em;
   }
 
   /* TIGHTER SECTIONS */
@@ -384,9 +401,9 @@ blockquote > * + *,
     gap: 0.2em 0.3em;
   }
 
-  :not(.icon-list, .tag-list, .grid-list) > li {
-    min-width: 10em;
-    margin-right: 1.5em;
+  ul:not(.tag-list) li:not(article ul li):not(.timeline ul li) {
+    max-width: 12em;
+    margin-right: 1em;
   }
 }
 
@@ -427,9 +444,9 @@ article header .meta {
     grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   }
 
-  :not(.icon-list, .tag-list, .grid-list) > li {
-    min-width: 18em;
-    margin-right: 2.5em;
+  ul:not(.tag-list) li:not(article ul li):not(.timeline ul li) {
+    max-width: 20em;
+    margin-right: 2em;
   }
 }
 `
