@@ -109,4 +109,22 @@ article {
   }
 }
 
+#volunteer {
+  article {
+    > p,ul {
+      margin-left: 1rem 0.5rem;
+    }
+    > ul {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.25rem 0.5rem;
+      > li {
+        &::before {
+          content: "•";
+          margin: auto 0.25rem;
+        }
+      }
+    }
+  }
+}
 `
