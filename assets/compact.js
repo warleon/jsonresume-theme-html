@@ -109,10 +109,10 @@ article {
   }
 }
 
-#volunteer {
+#volunteer,#education,#projects,#awards,#publications {
   article {
-    > p,ul {
-      margin-left: 1rem 0.5rem;
+    > p,ul,h5 {
+      margin-left: 0.5rem;
     }
     > ul {
       display: flex;
@@ -122,6 +122,32 @@ article {
         &::before {
           content: "•";
           margin: auto 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+#skills {
+  .grid-list {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    > div {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: nowrap;
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.5rem;
+        justify-content: flex-start;
+        > li {
+          &::before {
+            content: "•";
+            margin: auto 0.25rem;
+          }
         }
       }
     }
